@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  color: #e2ebdc; /* Light green for text */
+  background-color: #0d2700; /* Dark green background */
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, sans-serif; /* Ensure readable text */
+}
+
+#headerandbuttons {
+  width: 100%; /* Full width */
+  text-align: center; /* Center content */
+  padding: 15px 10px;
+  background-color: #79a756; /* Soft green background */
+  border-bottom: 2px solid #2a5a00; /* Deep green separator line */
+  position: fixed; /* Stick to the top of the page */
+  top: 0; /* Ensure it stays at the top */
+  z-index: 1000; /* Place above all other elements */
+  color: #0d2700; /* Contrast text color for header */
+}
+
+#dogbox {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: flex-start; /* Align images to the top */
+  flex-wrap: wrap; /* Allow images to wrap */
+  margin-top: 200px; /* Adjust for header height */
+  padding: 10px;
+  height: calc(100vh - 120px); /* Remaining height after the header */
+  overflow-y: auto; /* Allow vertical scrolling if needed */
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 2px solid #2a5a00; /* Deep green border */
+  background-color: #d1e2c8; /* Pastel blue background */
+  color: #0d2700; /* Dark green text color */
+  border-radius: 50px;
+  margin: 5px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease; /* Smooth transitions */
+}
+
+button:hover {
+  background-color: #2a5a00; /* Deep green on hover */
+  color: #aeda8e; /* Light green text on hover */
+}
+
+.image {
+  max-width: 90%; /* Adjust to smaller screens */
+  max-height: 300px; /* Ensure it fits smaller viewports */
+  border-radius: 20px;
+  margin: 10px 5px;
+  border: 3px solid #508126; /* Deep green border */
+}
+
+h1 {
+  font-size: 1.5rem; /* Adjust for smaller screens */
+  margin-bottom: 10px;
+  color: #0d2700; /* Contrast dark green text */
+}
+
+#breed {
+  font-size: 1rem; /* Adjust for smaller screens */
+  margin-top: 10px;
+  color: #d5e2cc; /* Light green for breed name */
+}
+
+main {
+  margin-bottom: 50px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  #headerandbuttons {
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+
+  h1 {
+    font-size: 1.2rem; /* Smaller font size for header */
+  }
+
+  button {
+    font-size: 12px; /* Smaller button font size */
+    padding: 6px 12px;
+  }
+
+  #dogbox {
+    margin-top: 140px; /* Adjust for slightly larger header on small screens */
+    padding: 5px;
+  }
+
+  .image {
+    max-width: 80%; /* Ensure images fit small screens */
+    max-height: 250px; /* Adjust image height */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1rem; /* Further reduce header font size */
+  }
+
+  button {
+    font-size: 10px;
+    padding: 4px 8px; /* Smaller padding for buttons */
+  }
+
+  #dogbox {
+    margin-top: 150px; /* Adjust for larger header */
+  }
+
+  .image {
+    max-width: 100%; /* Full-width images on very small screens */
+    max-height: 200px; /* Adjust height for very small screens */
+  }
+}
