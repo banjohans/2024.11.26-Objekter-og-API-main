@@ -78,9 +78,9 @@ persons[2].job = !persons[2].job; // Toggle boolean to change jobstatus
 
 function fotballPubben(person) {
   if (person.age > 18) {
-    console.log(person.firstName + " " + person.lastName + ": Party time!");
+    console.log(person.fullName() + ": Party time!");
   } else {
-    console.log(person.firstName + " " + person.lastName + ": too young :(");
+    console.log(person.fullName() + ": too young :(");
   }
 }
 persons.forEach(fotballPubben);
